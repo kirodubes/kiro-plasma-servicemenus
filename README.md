@@ -2,7 +2,7 @@
   <img src="kiro.jpg" alt="Kiro" width="220" />
 </p>
 
-# edu-plasma-servicemenus
+# kiro-plasma-servicemenus
 
 Right-click context-menu extensions for KDE Plasma's file manager (Dolphin) — adds useful actions like "Open in terminal here", "Copy path", and other workflow shortcuts. Part of the `~/EDU/` learning series.
 
@@ -23,14 +23,14 @@ Server = https://erikdubois.github.io/$repo/$arch
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S edu-plasma-servicemenus-git
+sudo pacman -S kiro-plasma-servicemenus
 ```
 
 ### Manual
 
 ```bash
-git clone https://github.com/erikdubois/edu-plasma-servicemenus.git
-cd edu-plasma-servicemenus
+git clone https://github.com/kirodubes/kiro-plasma-servicemenus.git
+cd kiro-plasma-servicemenus
 sudo cp -r etc/skel/. /etc/skel/
 ```
 

@@ -1,4 +1,4 @@
-# CLAUDE.md — edu-plasma-servicemenus
+# CLAUDE.md — kiro-plasma-servicemenus
 
 ## Project overview
 
