@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=vscode;vscodeRoot
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action vscode]
+Name=Open in VSCode
+Icon=visual-studio-code
+Exec=code %f
+
+[Desktop Action vscodeRoot]
+Name=Open as root in VSCode
+Icon=visual-studio-code
+Exec=sh -c 'pkexec env DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" code --no-sandbox --user-data-dir=/root/.vscode-root "$@"' _ %f

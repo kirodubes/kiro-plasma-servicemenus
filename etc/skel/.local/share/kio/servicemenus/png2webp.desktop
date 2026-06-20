@@ -13,4 +13,4 @@ X-KDE-Submenu[it]=Converti in
 Name=WebP image
 Name[it]=Immagine WebP
 Icon=image-webp
-Exec=filename=%f; magick "$filename" "${filename%.*}.webp"
+Exec=filename=%f; magick "$filename" -quality 90 "${filename%.*}.webp"

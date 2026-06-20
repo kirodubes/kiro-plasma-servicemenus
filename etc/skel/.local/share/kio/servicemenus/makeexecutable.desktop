@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=makeExecutable
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action makeExecutable]
+Name=Make executable
+Icon=application-x-executable
+Exec=chmod +x %F

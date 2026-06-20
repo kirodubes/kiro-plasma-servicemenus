@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openClaude
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action openClaude]
+Name=Open Claude Here
+Icon=utilities-terminal
+Exec=alacritty --working-directory %f -e claude

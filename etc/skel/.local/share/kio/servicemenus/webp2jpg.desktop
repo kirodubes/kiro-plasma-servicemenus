@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
-MimeType=image/png;
-Icon=image-png
+MimeType=image/webp;
+Icon=image-webp
 Actions=jpg
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
@@ -14,4 +14,3 @@ Name=JPEG image
 Name[it]=Immagine JPEG
 Icon=image-jpeg
 Exec=filename=%f; magick "$filename" -background white -alpha remove -alpha off -quality 90 "${filename%.*}.jpg"
-

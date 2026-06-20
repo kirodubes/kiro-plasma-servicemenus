@@ -16,18 +16,41 @@
 - **Added `jpg2webp.desktop`** — Convert to → WebP image for JPEGs.
 - README de-branded (`edu-plasma-servicemenus` → `kiro-plasma-servicemenus`, clone URL
   and package name updated).
+- Added `-quality 90` to all `magick` conversions (`png2jpg`, `png2webp`, `jpg2webp`,
+  `webp2jpg`) to match the Thunar custom actions and produce smaller files.
+
+### Ported from Thunar custom actions (Thunar↔Dolphin parity)
+Compared `~/.config/Thunar/uca.xml` against the Dolphin service menus and ported the
+genuine gaps (skipping anything Dolphin already does natively — terminal-here,
+extract/compress, search, copy-location, set-as-wallpaper, disk-usage):
+- **`openclaudehere.desktop`** — Open Claude Here (`alacritty --working-directory %f -e claude`).
+- **`openvscode.desktop`** — Open in VSCode + Open as root in VSCode (pkexec).
+- **`gittyup.desktop`** — Open with gittyup.
+- **`checksum.desktop`** — Checksum submenu: sha1 / sha256 / md5 (zenity popups).
+- **`webp2jpg.desktop`** — Convert to → JPEG for WebP files.
+- **`makeexecutable.desktop`** — `chmod +x` on selected files.
 
 ### Notes
 - All menus still use the **Plasma 5** service-menu format (`Type=Service` /
-  `ServiceTypes=KonqPopupMenu/Plugin`); pending verification they render in Dolphin 6.
+  `ServiceTypes=KonqPopupMenu/Plugin`); pending visual verification they render in Dolphin 6.
+- `desktop-file-validate` flags these (strict freedesktop *Application* spec) but KIO
+  accepts the KDE service-menu extensions (`Type=Service`, `all/all`, shell `Exec`);
+  conversion/checksum/chmod Exec lines were functionally tested on the box.
 - Helper-app deps to declare in the PKGBUILD when packaged: `meld` (compareusingmeld),
-  `kdesu` (openthunarasroot), `mintstick` (FormatUSB), `imagemagick` (png/jpg/webp).
+  `kdesu` (openthunarasroot), `mintstick` (FormatUSB), `imagemagick` (image converters),
+  `code` (VSCode), `gittyup`, `zenity` (checksums), `alacritty` (Open Claude Here).
 
 ### Files Modified
 - etc/skel/.local/share/kio/servicemenus/FormatUSB.desktop (new)
 - etc/skel/.local/share/kio/servicemenus/png2webp.desktop (new)
 - etc/skel/.local/share/kio/servicemenus/jpg2webp.desktop (new)
-- etc/skel/.local/share/kio/servicemenus/png2jpg.desktop (black-border fix)
+- etc/skel/.local/share/kio/servicemenus/webp2jpg.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/openclaudehere.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/openvscode.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/gittyup.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/checksum.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/makeexecutable.desktop (new)
+- etc/skel/.local/share/kio/servicemenus/png2jpg.desktop (black-border fix + quality)
 - etc/skel/.local/share/kio/servicemenus/openthunarasroot.desktop (de-branded)
 - README.md (de-branded)
 

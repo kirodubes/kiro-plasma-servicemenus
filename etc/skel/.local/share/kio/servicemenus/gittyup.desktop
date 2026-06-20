@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=gittyup
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action gittyup]
+Name=Open with gittyup
+Icon=gittyup
+Exec=gittyup %f

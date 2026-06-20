@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=sha1;sha256;md5
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Checksum
+
+[Desktop Action sha1]
+Name=Check sha1sum
+Icon=application-x-checksum
+Exec=sh -c 'zenity --info --title="sha1: $(basename "$1")" --text="$(sha1sum "$1")"' _ %f
+
+[Desktop Action sha256]
+Name=Check sha256sum
+Icon=application-x-checksum
+Exec=sh -c 'zenity --info --title="sha256: $(basename "$1")" --text="$(sha256sum "$1")"' _ %f
+
+[Desktop Action md5]
+Name=Check md5sum
+Icon=application-x-checksum
+Exec=sh -c 'zenity --info --title="md5: $(basename "$1")" --text="$(md5sum "$1")"' _ %f
