@@ -3,7 +3,6 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=inode/directory;
 Actions=vscode;vscodeRoot
-X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 
 [Desktop Action vscode]
