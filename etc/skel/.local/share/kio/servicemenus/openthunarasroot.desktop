@@ -6,9 +6,8 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=inode/directory;
 Actions=openAsRoot
-X-KDE-Priority=TopLevel
 
 [Desktop Action openAsRoot]
-Name=Open Thunar as root (ArcoLinux)
+Name=Open Thunar as root
 Icon=system-file-manager
 Exec=kdesu thunar
