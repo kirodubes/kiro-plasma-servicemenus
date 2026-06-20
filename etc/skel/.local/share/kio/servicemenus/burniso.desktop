@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-cd-image;application/x-iso9660-image;
+Icon=usb-creator-kde
+Actions=burnIso
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action burnIso]
+Name=Write ISO to USB
+Icon=usb-creator-kde
+Exec=sh -c '[ -x /usr/bin/mintstick ] && mintstick -m iso -i "$1" || notify-send -u critical "Please install the mintstick package first"' _ %f

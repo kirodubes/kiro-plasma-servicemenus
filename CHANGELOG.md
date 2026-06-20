@@ -6,6 +6,9 @@
 - Synced the service menus from a live Plasma box into the repo.
 - **Added `FormatUSB.desktop`** — right-click "Format USB" action (uses `mintstick`;
   self-installs a Solid device action on first use; notifies if `mintstick` is missing).
+- **Added `burniso.desktop`** — right-click an `.iso` → "Write ISO to USB" (mintstick
+  ISO-writer mode, `mintstick -m iso -i %f`); notifies if `mintstick` isn't installed.
+  Mimetypes `application/x-cd-image` + `application/x-iso9660-image`.
 - **`openthunarasroot.desktop`** — de-branded the label (`Open Thunar as root (ArcoLinux)`
   → `Open Thunar as root`) and dropped the `X-KDE-Priority=TopLevel` line.
 - **`png2jpg.desktop` — fixed black border.** PNG transparency was flattening to black
