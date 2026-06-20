@@ -29,7 +29,9 @@ extract/compress, search, copy-location, set-as-wallpaper, disk-usage):
 - **`openclaudehere.desktop`** — Open Claude Here (`alacritty --working-directory %f -e claude`).
 - **`openvscode.desktop`** — Open in VSCode + Open as root in VSCode (pkexec).
 - **`gittyup.desktop`** — Open with gittyup.
-- **`checksum.desktop`** — Checksum submenu: sha1 / sha256 / md5 (zenity popups).
+- **`checksum.desktop`** — Checksum submenu: sha1 / sha256 / md5 (kdialog popups —
+  switched from zenity, which isn't present on Plasma; both zenity and kdialog were
+  missing on the box so the click did nothing. `kdialog --msgbox "$(<sum> "$1")"`).
 - **`webp2jpg.desktop`** — Convert to → JPEG for WebP files.
 - **`makeexecutable.desktop`** — `chmod +x` on selected files.
 
@@ -40,8 +42,9 @@ extract/compress, search, copy-location, set-as-wallpaper, disk-usage):
   accepts the KDE service-menu extensions (`Type=Service`, `all/all`, shell `Exec`);
   conversion/checksum/chmod Exec lines were functionally tested on the box.
 - Helper-app deps to declare in the PKGBUILD when packaged: `meld` (compareusingmeld),
-  `kdesu` (openthunarasroot), `mintstick` (FormatUSB), `imagemagick` (image converters),
-  `code` (VSCode), `gittyup`, `zenity` (checksums), `alacritty` (Open Claude Here).
+  `kdesu` (openthunarasroot), `mintstick` (FormatUSB + burniso), `imagemagick`
+  (image converters), `code` (VSCode), `gittyup`, `kdialog` (checksums),
+  `alacritty` (Open Claude Here).
 
 ### Files Modified
 - etc/skel/.local/share/kio/servicemenus/FormatUSB.desktop (new)
