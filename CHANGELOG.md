@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026.11.03
+
+### What Changed
+- **The "install mintstick first" warning is now translated into all 13 Kiro languages**
+  (de, es, fr, hu, it, ja, nl, pl, pt_BR, ro, ru, tr, zh_CN). Format USB and Write ISO to
+  USB used two spellings of the same message ("Please Install The (mintstick) Package
+  First" / "Please install the mintstick package first"); both now show the second one,
+  from a single helper.
+
+### Technical Details
+- New helper `etc/skel/.local/share/kio/servicemenus/kiro/mintstick-missing.sh` runs
+  `notify-send` through gettext (domain `kiro-plasma-servicemenus`, catalogs in `locale/`
+  next to the helper, English fallback when gettext or a catalog is missing). Both
+  `.desktop` Exec lines call it via `$HOME/.local/share/kio/servicemenus/kiro/`. It sits in
+  a subfolder so Dolphin never mistakes it for a service menu.
+- `po/make-mo.sh` (copied from kiro-chadwm's) extracts the `_t` strings into the `.pot`,
+  merges each `.po` and compiles the `.mo` files next to the helper. The `.po` headers are set
+  to UTF-8 by hand: the source is pure ASCII, so `msginit` wrote `charset=ASCII` and
+  `msgmerge` rejected the translations.
+- The helper follows the window-manager exception in Kiro-HQ `TEMPLATE_EXCLUSIONS.md`
+  (banner header + `set -euo pipefail`, no log suite or ERR trap): Dolphin runs it with no terminal attached.
+
+### Files Modified
+- `etc/skel/.local/share/kio/servicemenus/burniso.desktop`
+- `etc/skel/.local/share/kio/servicemenus/FormatUSB.desktop`
+- `etc/skel/.local/share/kio/servicemenus/kiro/mintstick-missing.sh` (new)
+- `etc/skel/.local/share/kio/servicemenus/kiro/locale/*/LC_MESSAGES/kiro-plasma-servicemenus.mo` (new, 13)
+- `po/` (new: `make-mo.sh`, `kiro-plasma-servicemenus.pot`, 13 `.po`, `LINGUAS`)
+- `README.md`, `CHANGELOG.md`
+
 ## 2026.06.20
 
 ### What Changed

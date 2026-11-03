@@ -10,4 +10,4 @@ X-KDE-StartupNotify=false
 [Desktop Action burnIso]
 Name=Write ISO to USB
 Icon=usb-creator-kde
-Exec=sh -c '[ -x /usr/bin/mintstick ] && mintstick -m iso -i "$1" || notify-send -u critical "Please install the mintstick package first"' _ %f
+Exec=sh -c '[ -x /usr/bin/mintstick ] && mintstick -m iso -i "$1" || "$HOME/.local/share/kio/servicemenus/kiro/mintstick-missing.sh"' _ %f
