@@ -7,5 +7,18 @@ X-KDE-StartupNotify=false
 
 [Desktop Action gittyup]
 Name=Open with gittyup
+Name[de]=Mit gittyup öffnen
+Name[es]=Abrir con gittyup
+Name[fr]=Ouvrir avec gittyup
+Name[hu]=Megnyitás a gittyup programmal
+Name[it]=Apri con gittyup
+Name[ja]=gittyup で開く
+Name[nl]=Openen met gittyup
+Name[pl]=Otwórz w gittyup
+Name[pt_BR]=Abrir com o gittyup
+Name[ro]=Deschide cu gittyup
+Name[ru]=Открыть в gittyup
+Name[tr]=gittyup ile aç
+Name[zh_CN]=用 gittyup 打开
 Icon=gittyup
 Exec=gittyup %f

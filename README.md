@@ -8,7 +8,7 @@ Right-click context-menu extensions for KDE Plasma's file manager (Dolphin) — 
 
 ## What's in this repo
 
-- `etc/skel/` — Plasma service-menu `.desktop` files that land in `/etc/skel/.local/share/kio/servicemenus/` (or the system-wide equivalent).
+- `etc/skel/` — Plasma service-menu `.desktop` files that land in `/etc/skel/.local/share/kio/servicemenus/` (or the system-wide equivalent). Their labels carry `Name[xx]=` lines for the 13 Kiro languages.
 - `po/` — translations of the helper messages (13 languages); run `po/make-mo.sh` after changing a message to rebuild the `.mo` files.
 - `setup.sh`, `up.sh` — standard EDU bash scaffold.
 

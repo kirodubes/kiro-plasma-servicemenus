@@ -9,5 +9,18 @@ Actions=openAsRoot
 
 [Desktop Action openAsRoot]
 Name=Open Thunar as root
+Name[de]=Thunar als root öffnen
+Name[es]=Abrir Thunar como root
+Name[fr]=Ouvrir Thunar en tant que root
+Name[hu]=Thunar megnyitása rootként
+Name[it]=Apri Thunar come root
+Name[ja]=root として Thunar を開く
+Name[nl]=Thunar openen als root
+Name[pl]=Otwórz Thunar jako root
+Name[pt_BR]=Abrir o Thunar como root
+Name[ro]=Deschide Thunar ca root
+Name[ru]=Открыть Thunar от имени root
+Name[tr]=Thunar'ı root olarak aç
+Name[zh_CN]=以 root 身份打开 Thunar
 Icon=system-file-manager
 Exec=kdesu thunar

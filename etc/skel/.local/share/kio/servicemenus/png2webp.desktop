@@ -7,10 +7,34 @@ Actions=webp
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Convert to
+X-KDE-Submenu[de]=Konvertieren in
+X-KDE-Submenu[es]=Convertir a
+X-KDE-Submenu[fr]=Convertir en
+X-KDE-Submenu[hu]=Konvertálás
 X-KDE-Submenu[it]=Converti in
+X-KDE-Submenu[ja]=変換
+X-KDE-Submenu[nl]=Converteren naar
+X-KDE-Submenu[pl]=Konwertuj na
+X-KDE-Submenu[pt_BR]=Converter para
+X-KDE-Submenu[ro]=Convertește în
+X-KDE-Submenu[ru]=Преобразовать в
+X-KDE-Submenu[tr]=Dönüştür
+X-KDE-Submenu[zh_CN]=转换为
 
 [Desktop Action webp]
 Name=WebP image
+Name[de]=WebP-Bild
+Name[es]=Imagen WebP
+Name[fr]=Image WebP
+Name[hu]=WebP-kép
 Name[it]=Immagine WebP
+Name[ja]=WebP 画像
+Name[nl]=WebP-afbeelding
+Name[pl]=Obraz WebP
+Name[pt_BR]=Imagem WebP
+Name[ro]=Imagine WebP
+Name[ru]=Изображение WebP
+Name[tr]=WebP görüntüsü
+Name[zh_CN]=WebP 图像
 Icon=image-webp
 Exec=filename=%f; magick "$filename" -quality 90 "${filename%.*}.webp"

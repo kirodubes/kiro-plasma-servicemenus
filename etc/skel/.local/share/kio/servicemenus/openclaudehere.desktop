@@ -7,5 +7,18 @@ X-KDE-StartupNotify=false
 
 [Desktop Action openClaude]
 Name=Open Claude Here
+Name[de]=Claude hier öffnen
+Name[es]=Abrir Claude aquí
+Name[fr]=Ouvrir Claude ici
+Name[hu]=Claude megnyitása itt
+Name[it]=Apri Claude qui
+Name[ja]=ここで Claude を開く
+Name[nl]=Claude hier openen
+Name[pl]=Otwórz tutaj Claude
+Name[pt_BR]=Abrir o Claude aqui
+Name[ro]=Deschide Claude aici
+Name[ru]=Открыть Claude здесь
+Name[tr]=Claude'u burada aç
+Name[zh_CN]=在此处打开 Claude
 Icon=utilities-terminal
 Exec=alacritty --working-directory %f -e claude

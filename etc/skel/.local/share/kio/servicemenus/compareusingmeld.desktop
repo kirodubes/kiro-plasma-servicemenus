@@ -9,35 +9,107 @@ Icon=org.gnome.meld
 Actions=setArg1;diff;diffsudo;_SEPARATOR_;selected;selectedsudo;
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Compare using meld
+X-KDE-Submenu[de]=Mit meld vergleichen
+X-KDE-Submenu[es]=Comparar con meld
+X-KDE-Submenu[fr]=Comparer avec meld
+X-KDE-Submenu[hu]=Összehasonlítás meld-del
+X-KDE-Submenu[it]=Confronta con meld
+X-KDE-Submenu[ja]=meld で比較
+X-KDE-Submenu[nl]=Vergelijken met meld
+X-KDE-Submenu[pl]=Porównaj za pomocą meld
+X-KDE-Submenu[pt_BR]=Comparar com o meld
+X-KDE-Submenu[ro]=Compară cu meld
 X-KDE-Submenu[ru]=Сравнить используя meld
+X-KDE-Submenu[tr]=meld ile karşılaştır
+X-KDE-Submenu[zh_CN]=使用 meld 比较
 
 [Desktop Action setArg1]
 Icon=document-compareleft
 Exec=echo "%U" > /tmp/meld-menu-arg1
 Name=Mark for use in left column
+Name[de]=Für die linke Spalte markieren
+Name[es]=Marcar para la columna izquierda
+Name[fr]=Marquer pour la colonne de gauche
+Name[hu]=Megjelölés a bal oszlophoz
+Name[it]=Segna per la colonna sinistra
+Name[ja]=左側の列用にマーク
+Name[nl]=Markeren voor de linkerkolom
+Name[pl]=Oznacz do lewej kolumny
+Name[pt_BR]=Marcar para a coluna esquerda
+Name[ro]=Marchează pentru coloana din stânga
 Name[ru]=Пометить для использования в левой колонке
+Name[tr]=Sol sütun için işaretle
+Name[zh_CN]=标记用于左栏
 
 [Desktop Action diff]
 Icon=document-compareright
 Exec=ARG1=$(cat /tmp/meld-menu-arg1);meld "$ARG1" %U; rm /tmp/meld-menu-arg1;
 Name=Use in right column and compare
+Name[de]=In der rechten Spalte verwenden und vergleichen
+Name[es]=Usar en la columna derecha y comparar
+Name[fr]=Utiliser dans la colonne de droite et comparer
+Name[hu]=Használat a jobb oszlopban és összehasonlítás
+Name[it]=Usa nella colonna destra e confronta
+Name[ja]=右側の列で使用して比較
+Name[nl]=Gebruiken in de rechterkolom en vergelijken
+Name[pl]=Użyj w prawej kolumnie i porównaj
+Name[pt_BR]=Usar na coluna direita e comparar
+Name[ro]=Folosește în coloana din dreapta și compară
 Name[ru]=Использовать в правой колонке и сравнить
+Name[tr]=Sağ sütunda kullan ve karşılaştır
+Name[zh_CN]=用于右栏并比较
 
 [Desktop Action diffsudo]
 Icon=document-compareright
 Exec=ARG1=$(cat /tmp/meld-menu-arg1); rm /tmp/meld-menu-arg1; if [ "$XDG_SESSION_TYPE" = "wayland" ]; then xhost +si:localuser:root && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch meld "$ARG1" %U && xhost -si:localuser:root ; else pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true meld "$ARG1" %U; fi;
 Name=Use in right column and compare as root
+Name[de]=In der rechten Spalte verwenden und als root vergleichen
+Name[es]=Usar en la columna derecha y comparar como root
+Name[fr]=Utiliser dans la colonne de droite et comparer en tant que root
+Name[hu]=Használat a jobb oszlopban és összehasonlítás rootként
+Name[it]=Usa nella colonna destra e confronta come root
+Name[ja]=右側の列で使用して root として比較
+Name[nl]=Gebruiken in de rechterkolom en vergelijken als root
+Name[pl]=Użyj w prawej kolumnie i porównaj jako root
+Name[pt_BR]=Usar na coluna direita e comparar como root
+Name[ro]=Folosește în coloana din dreapta și compară ca root
 Name[ru]=Использовать в правой колонке и сравнить как root
+Name[tr]=Sağ sütunda kullan ve root olarak karşılaştır
+Name[zh_CN]=用于右栏并以 root 身份比较
 
 [Desktop Action selected]
 Icon=kr_comparedirs
 Exec=meld %U; rm /tmp/meld-menu-arg1;
 Name=Compare selected (highlighted) files/folders
+Name[de]=Ausgewählte (markierte) Dateien/Ordner vergleichen
+Name[es]=Comparar archivos/carpetas seleccionados (resaltados)
+Name[fr]=Comparer les fichiers/dossiers sélectionnés (en surbrillance)
+Name[hu]=Kijelölt (kiemelt) fájlok/mappák összehasonlítása
+Name[it]=Confronta file/cartelle selezionati (evidenziati)
+Name[ja]=選択した (ハイライトされた) ファイル/フォルダーを比較
+Name[nl]=Geselecteerde (gemarkeerde) bestanden/mappen vergelijken
+Name[pl]=Porównaj zaznaczone (podświetlone) pliki/foldery
+Name[pt_BR]=Comparar arquivos/pastas selecionados (destacados)
+Name[ro]=Compară fișierele/folderele selectate (evidențiate)
 Name[ru]=Сравнить выделенные (подсвеченные) файлы/папки
+Name[tr]=Seçili (vurgulanmış) dosyaları/klasörleri karşılaştır
+Name[zh_CN]=比较选中的 (高亮的) 文件/文件夹
 
 [Desktop Action selectedsudo]
 Icon=kr_comparedirs
 # Exec=sudo meld %U; rm /tmp/meld-menu-arg1;
 Exec=if [ "$XDG_SESSION_TYPE" = "wayland" ]; then xhost +si:localuser:root && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch meld %U && xhost -si:localuser:root ; else pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true meld %U; fi;
 Name=Compare selected (highlighted) files/folders as root
+Name[de]=Ausgewählte (markierte) Dateien/Ordner als root vergleichen
+Name[es]=Comparar archivos/carpetas seleccionados (resaltados) como root
+Name[fr]=Comparer les fichiers/dossiers sélectionnés (en surbrillance) en tant que root
+Name[hu]=Kijelölt (kiemelt) fájlok/mappák összehasonlítása rootként
+Name[it]=Confronta file/cartelle selezionati (evidenziati) come root
+Name[ja]=選択した (ハイライトされた) ファイル/フォルダーを root として比較
+Name[nl]=Geselecteerde (gemarkeerde) bestanden/mappen vergelijken als root
+Name[pl]=Porównaj zaznaczone (podświetlone) pliki/foldery jako root
+Name[pt_BR]=Comparar arquivos/pastas selecionados (destacados) como root
+Name[ro]=Compară fișierele/folderele selectate (evidențiate) ca root
 Name[ru]=Сравнить выделенные (подсвеченные) файлы/папки как root
+Name[tr]=Seçili (vurgulanmış) dosyaları/klasörleri root olarak karşılaştır
+Name[zh_CN]=以 root 身份比较选中的 (高亮的) 文件/文件夹

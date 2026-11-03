@@ -9,5 +9,18 @@ X-KDE-StartupNotify=false
 
 [Desktop Action burnIso]
 Name=Write ISO to USB
+Name[de]=ISO auf USB schreiben
+Name[es]=Escribir ISO en USB
+Name[fr]=Écrire l'ISO sur une clé USB
+Name[hu]=ISO írása USB-re
+Name[it]=Scrivi ISO su USB
+Name[ja]=ISO を USB に書き込む
+Name[nl]=ISO naar USB schrijven
+Name[pl]=Zapisz ISO na USB
+Name[pt_BR]=Gravar ISO no USB
+Name[ro]=Scrie ISO pe USB
+Name[ru]=Записать ISO на USB
+Name[tr]=ISO'yu USB'ye yaz
+Name[zh_CN]=将 ISO 写入 USB
 Icon=usb-creator-kde
 Exec=sh -c '[ -x /usr/bin/mintstick ] && mintstick -m iso -i "$1" || "$HOME/.local/share/kio/servicemenus/kiro/mintstick-missing.sh"' _ %f

@@ -1,0 +1,4 @@
+[codespell]
+# Real words in the translated Name[xx]= labels (nl openen/als, de Ordner/linke, fr Formater/Somme).
+# Listed one by one instead of skipping *.desktop: the English labels live in the same files.
+ignore-words-list = als,openen,ordner,linke,formater,somme

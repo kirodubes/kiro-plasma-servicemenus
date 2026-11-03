@@ -7,11 +7,35 @@ Actions=jpg
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Convert to
+X-KDE-Submenu[de]=Konvertieren in
+X-KDE-Submenu[es]=Convertir a
+X-KDE-Submenu[fr]=Convertir en
+X-KDE-Submenu[hu]=Konvertálás
 X-KDE-Submenu[it]=Converti in
+X-KDE-Submenu[ja]=変換
+X-KDE-Submenu[nl]=Converteren naar
+X-KDE-Submenu[pl]=Konwertuj na
+X-KDE-Submenu[pt_BR]=Converter para
+X-KDE-Submenu[ro]=Convertește în
+X-KDE-Submenu[ru]=Преобразовать в
+X-KDE-Submenu[tr]=Dönüştür
+X-KDE-Submenu[zh_CN]=转换为
 
 [Desktop Action jpg]
 Name=JPEG image
+Name[de]=JPEG-Bild
+Name[es]=Imagen JPEG
+Name[fr]=Image JPEG
+Name[hu]=JPEG-kép
 Name[it]=Immagine JPEG
+Name[ja]=JPEG 画像
+Name[nl]=JPEG-afbeelding
+Name[pl]=Obraz JPEG
+Name[pt_BR]=Imagem JPEG
+Name[ro]=Imagine JPEG
+Name[ru]=Изображение JPEG
+Name[tr]=JPEG görüntüsü
+Name[zh_CN]=JPEG 图像
 Icon=image-jpeg
 Exec=filename=%f; magick "$filename" -background white -alpha remove -alpha off -quality 90 "${filename%.*}.jpg"
 

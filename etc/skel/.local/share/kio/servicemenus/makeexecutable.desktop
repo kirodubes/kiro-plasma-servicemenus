@@ -8,5 +8,18 @@ X-KDE-StartupNotify=false
 
 [Desktop Action makeExecutable]
 Name=Make executable
+Name[de]=Ausführbar machen
+Name[es]=Hacer ejecutable
+Name[fr]=Rendre exécutable
+Name[hu]=Futtathatóvá tétel
+Name[it]=Rendi eseguibile
+Name[ja]=実行可能にする
+Name[nl]=Uitvoerbaar maken
+Name[pl]=Nadaj prawo wykonywania
+Name[pt_BR]=Tornar executável
+Name[ro]=Fă executabil
+Name[ru]=Сделать исполняемым
+Name[tr]=Çalıştırılabilir yap
+Name[zh_CN]=设为可执行
 Icon=application-x-executable
 Exec=chmod +x %F

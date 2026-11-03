@@ -8,8 +8,18 @@
   USB used two spellings of the same message ("Please Install The (mintstick) Package
   First" / "Please install the mintstick package first"); both now show the second one,
   from a single helper.
+- **Every service-menu label is now translated into the same 13 languages.** All 13 `.desktop`
+  files had English-only labels (apart from a Russian meld submenu and three Italian lines);
+  each `Name=` and `X-KDE-Submenu=` now carries a `[xx]` line for every language, so Dolphin
+  shows the right-click entries in the user's language. The Italian "Format USB" label changed
+  from "Partiziona USB" (partition) to "Formatta USB".
 
 ### Technical Details
+- The labels are standard `.desktop` localized keys, not gettext: Dolphin reads `Name[xx]=`
+  itself, so no `.po` entry is needed. The existing Russian meld strings were kept as they were.
+  `desktop-file-validate` reports nothing new compared to the English-only files.
+- New `.codespellrc` lists the six foreign words codespell flagged (als, openen, ordner, linke,
+  formater, somme) instead of skipping `*.desktop`, so the English labels are still spellchecked.
 - New helper `etc/skel/.local/share/kio/servicemenus/kiro/mintstick-missing.sh` runs
   `notify-send` through gettext (domain `kiro-plasma-servicemenus`, catalogs in `locale/`
   next to the helper, English fallback when gettext or a catalog is missing). Both
@@ -23,11 +33,11 @@
   (banner header + `set -euo pipefail`, no log suite or ERR trap): Dolphin runs it with no terminal attached.
 
 ### Files Modified
-- `etc/skel/.local/share/kio/servicemenus/burniso.desktop`
-- `etc/skel/.local/share/kio/servicemenus/FormatUSB.desktop`
+- `etc/skel/.local/share/kio/servicemenus/*.desktop` (all 13: localized labels; burniso + FormatUSB also the helper call)
 - `etc/skel/.local/share/kio/servicemenus/kiro/mintstick-missing.sh` (new)
 - `etc/skel/.local/share/kio/servicemenus/kiro/locale/*/LC_MESSAGES/kiro-plasma-servicemenus.mo` (new, 13)
 - `po/` (new: `make-mo.sh`, `kiro-plasma-servicemenus.pot`, 13 `.po`, `LINGUAS`)
+- `.codespellrc` (new)
 - `README.md`, `CHANGELOG.md`
 
 ## 2026.06.20

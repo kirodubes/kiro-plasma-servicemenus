@@ -8,5 +8,17 @@ X-KDE-StartupNotify=false
 [Desktop Action Format]
 Icon=usb-creator-kde
 Name=Format USB
-Name[it]=Partiziona USB
+Name[de]=USB formatieren
+Name[es]=Formatear USB
+Name[fr]=Formater la clé USB
+Name[hu]=USB formázása
+Name[it]=Formatta USB
+Name[ja]=USB をフォーマット
+Name[nl]=USB formatteren
+Name[pl]=Formatuj USB
+Name[pt_BR]=Formatar USB
+Name[ro]=Formatează USB
+Name[ru]=Форматировать USB
+Name[tr]=USB'yi biçimlendir
+Name[zh_CN]=格式化 USB
 Exec=bash -c 'mkdir -p ~/.local/share/solid/actions/ && [ ! -f /usr/bin/mintstick ] && "$HOME/.local/share/kio/servicemenus/kiro/mintstick-missing.sh" && exit 1 ;[ ! -f ~/.local/share/solid/actions/Formatter.desktop ] &&  printf "[Desktop Action open]\nExec=mintstick -m format --usb /dev/\e$(basename \e"%%%%i\e" )\nIcon=usb-creator-kde\nName=Format USB\n[Desktop Entry]\nActions=open;\nType=Service\nX-KDE-Action-Custom=true\nX-KDE-Solid-Predicate=[ IS StorageVolume AND StorageVolume.ignored == false ]" > ~/.local/share/solid/actions/Formatter.desktop ;mintstick -m format '

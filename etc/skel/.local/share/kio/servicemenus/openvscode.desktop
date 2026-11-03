@@ -7,10 +7,36 @@ X-KDE-StartupNotify=false
 
 [Desktop Action vscode]
 Name=Open in VSCode
+Name[de]=In VSCode öffnen
+Name[es]=Abrir en VSCode
+Name[fr]=Ouvrir dans VSCode
+Name[hu]=Megnyitás VSCode-ban
+Name[it]=Apri in VSCode
+Name[ja]=VSCode で開く
+Name[nl]=Openen in VSCode
+Name[pl]=Otwórz w VSCode
+Name[pt_BR]=Abrir no VSCode
+Name[ro]=Deschide în VSCode
+Name[ru]=Открыть в VSCode
+Name[tr]=VSCode'da aç
+Name[zh_CN]=在 VSCode 中打开
 Icon=visual-studio-code
 Exec=code %f
 
 [Desktop Action vscodeRoot]
 Name=Open as root in VSCode
+Name[de]=Als root in VSCode öffnen
+Name[es]=Abrir como root en VSCode
+Name[fr]=Ouvrir en tant que root dans VSCode
+Name[hu]=Megnyitás rootként VSCode-ban
+Name[it]=Apri come root in VSCode
+Name[ja]=root として VSCode で開く
+Name[nl]=Openen als root in VSCode
+Name[pl]=Otwórz jako root w VSCode
+Name[pt_BR]=Abrir como root no VSCode
+Name[ro]=Deschide ca root în VSCode
+Name[ru]=Открыть от имени root в VSCode
+Name[tr]=VSCode'da root olarak aç
+Name[zh_CN]=以 root 身份在 VSCode 中打开
 Icon=visual-studio-code
 Exec=sh -c 'pkexec env DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" code --no-sandbox --user-data-dir=/root/.vscode-root "$@"' _ %f
